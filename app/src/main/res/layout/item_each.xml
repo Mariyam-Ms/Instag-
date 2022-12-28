@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardElevation="12dp"
+    app:cardCornerRadius="9dp"
+    app:cardUseCompatPadding="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name :-  "
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/userNamePlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Name "
+            android:textColor="#808080"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="6dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/userName"
+            android:textStyle="italic"/>
+        <TextView
+            android:id="@+id/userEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email :- "
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userName"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/userEmailPlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="email.com"
+            android:textColor="#808080"
+            app:layout_constraintStart_toStartOf="@id/userNamePlace"
+            app:layout_constraintTop_toTopOf="@id/userEmail"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/userAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age :- "
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="6dp"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/userEmail"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/userAgePlace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textColor="#808080"
+            app:layout_constraintStart_toStartOf="@id/userEmailPlace"
+            app:layout_constraintTop_toTopOf="@id/userAge"
+            android:textStyle="italic"/>
+
+
+        <ImageView
+            android:id="@+id/editItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_edit_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <ImageView
+            android:id="@+id/deleteItem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_baseline_delete_24"
+            app:layout_constraintEnd_toStartOf="@+id/editItem"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>
