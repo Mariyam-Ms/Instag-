@@ -17,7 +17,8 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private DataViewModel viewModel;
     private DataItem dataItem;
-    private int id , age;
+    private int id ;
+    private String age;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
 
         dataItem=getIntent().getParcelableExtra("dataItem");
         id=getIntent().getIntExtra("id",0);
-        age=getIntent().getIntExtra("age",0);
+        age=getIntent().getStringExtra("age");
 
         if(dataItem != null) {
             setDataToWidgets();
@@ -53,8 +54,10 @@ public class MainActivity extends AppCompatActivity {
         binding.userName.setText(dataItem.getUserName());
         binding.userEmail.setText(dataItem.getUserEmail());
         binding.userAge.setText(String.valueOf(dataItem.getUserAge()));
-
         binding.saveBtn.setText("Update");
+
+
+
     }
 
     private void registerClickEvents() {
@@ -79,8 +82,9 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity.this, "Please update any field", Toast.LENGTH_SHORT).show();
                     }
                 } else if (id != 0) {
-                    if (!"takenUserAge" .equals( age)) {
+                    if (!takenUserAge .equals( age)) {
                         viewModel.updateAge(id, takenUserAge);
+
                     } else {
                         Toast.makeText(MainActivity.this, "Please update age", Toast.LENGTH_SHORT).show();
 
